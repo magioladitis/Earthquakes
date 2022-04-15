@@ -1,4 +1,9 @@
 /* Work in progress */
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+from statsmodels.graphics.tsaplots import plot_acf
+from statsmodels.tsa.stattools import acovf
 
 print('Variance : {}'.format(var))
     fig, ax = plt.subplots(nrows=1, ncols=1, facecolor="#F0F0F0")  #define a figure
