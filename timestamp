@@ -1,0 +1,17 @@
+from datetime import datetime
+
+timestamp = 1625309472.357246
+# convert to datetime
+date_time = datetime.fromtimestamp(timestamp)
+
+# convert timestamp to string in dd-mm-yyyy HH:MM:SS
+str_date_time = date_time.strftime("%d-%m-%Y, %H:%M:%S")
+print("Result 1:", str_date_time)
+
+# convert timestamp to string in dd month_name, yyyy format
+str_date = date_time.strftime("%d %B, %Y")
+print("Result 2:", str_date)
+
+# convert timestamp in HH:AM/PM MM:SS
+str_time = date_time.strftime("%I%p %M:%S")
+print("Result 3:", str_time)
