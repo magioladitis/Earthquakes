@@ -8,7 +8,7 @@ def menu(f):
 	print('Ανάλυση Στατιστικών Δεδομένων Αρχείου: ',f)
 	print('1. Κυλιόμενος μέσος όρος')
 	print('2. Κυλιόμενη διάμεσος')
-	print('3. Διακύμανση')
+	print('3. Κυλιόμενη διακύμανση')
 	print('4. Εύρος')
 	print('5. Έξοδος')
 	choice = 0
@@ -51,8 +51,11 @@ while c != 5:
 		w = int(input('Παράθυρο δεδομένων (1 όλα τα δεδομένα) = '))
 		w_median(csv_files[file_index-1],data,w)
 		c = menu(csv_files[file_index-1])
-		
-		
-		
-		
-		
+	if c == 3:
+		w = int(input('Παράθυρο δεδομένων (1 όλα τα δεδομένα) = '))
+		w_variance(csv_files[file_index-1],data,w)
+		c = menu(csv_files[file_index-1])
+	if c == 4:
+		w = int(input('Παράθυρο δεδομένων (1 όλα τα δεδομένα) = '))
+		w_min_max(csv_files[file_index-1],data,w)
+		c = menu(csv_files[file_index-1])
